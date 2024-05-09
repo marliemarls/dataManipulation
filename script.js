@@ -1,51 +1,88 @@
-//here I am declaring all my variables as consts because these are all immutable (to me)
-const num = 2;
-const num2 = 7;
-const myName = "Marlie";
-const faveColor = "blue";
-const cats = 3;
+// The initial numbers that must be verified.
+const n1 = 6;
+const n2 = 17;
+const n3 = 24;
+const n4 = 3;
 
-/**
- * What I'm doing below is basically manipulating the equation variable as I declared it with let, making it a mutable variable. 
- * This allowed me to manipulate the equation to perform the arithmetic operators 
- * as well as console.log equation without having to create a new variable to test the operators. 
+// Check one: add up to 50
+// This is a fairly simple operation using
+// arithmetic operators and a comparison.
+const isSum50 = (n1 + n2 + n3 + n4) == 50;
+
+// Check two: at least two odd numbers
+// Here, we use modulus to check if something is odd.
+// Since % 2 is 0 if even and 1 if odd, we can use
+// arithmetic to count the total number of odd numbers.
+const isTwoOdd = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
+
+// Check three: no number larger than 25
+// This time, we use the OR operator to check
+// if ANY of the numbers is larger than 25.
+const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+
+// Check four: all unique numbers
+// This is long, and there are more efficient
+// ways of handling it with other data structures
+// that we will review later.
+const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
+
+// Here, we put the results into a single variable 
+// for convenience. Note how we negate isOver25 using
+// the ! operator. We could also have tested for 
+// "isUnder25" as an alternative.
+const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
+
+// Finally, log the results.
+console.log(isValid);
+
+// Here's another example of how this COULD be done,
+// but it SHOULD NOT be done this way. As programmers,
+// we break things into small, manageable pieces so that
+// they can be better understood, scaled, and maintained.
+const dontDoThis = ((n1 + n2 + n3 + n4) == 50) && 
+  ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
+  !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
+  (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+
+
+
+/** Part 2:
+ * In order to do this part, I decided to create variables to hold the information that was already given to me.
  */
+const milesToDestination = 1500;
+const gasPrice = 3;
+const fuelBudget = 175;
+const fiftyFiveMPH = 30;
+const sixtyMPH = 28;
+const seventyFiveMPH = 23;
 
-let equation = num * num2;
-
-console.log(equation);
-
-equation = num + num2;
-
-console.log(equation);
-
-equation = num2 - num;
+let equation = milesToDestination / fiftyFiveMPH;
 
 console.log(equation);
+let gallons55 = equation
 
-equation = num2 % num;
+equation = milesToDestination / sixtyMPH
 
-console.log(equation);
+console.log(equation)
 
-equation = num2 / num;
+equation = milesToDestination / seventyFiveMPH
 
-console.log(equation);
+console.log(equation)
 
-//below here I began to test the comparison operators with num & num2 
 
-console.log(num < num2);
-console.log(num > num2);
-console.log(num <= num2);
-console.log(num >= num2);
 
-console.log(num2 < num || num < num2);
-console.log(num2 < num && num < num2);
 
-// finally, I began to create strings with the use of string concatenation as well as string interpolation. 
-//I decided to create a new variable for the interpolation to create a more fluid paragraph
 
-const myPosition = "Jr Developer."
 
-console.log(`Hi my name is ${myName}, and I have ${cats} cats. My favorite color is ${faveColor}.`);
-console.log("When I went to work today, I said \"Good morning\" to all my coworkers.");
-console.log("I work at PeopleShores as a " + myPosition)
+
+
+
+
+
+
+
+
+
+
+
+
