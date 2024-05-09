@@ -67,7 +67,6 @@ console.log(equation)
 
 equation = milesToDestination / seventyFiveMPH
 
-console.log(equation)
 
 
 
