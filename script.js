@@ -26,9 +26,9 @@ const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
 // that we will review later.
 const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
 
-//i think this is the other part of part 1???
+//i think this is the other part of part 1??? I am using the === sign to check if all the values of the variables are equal to each other. if it comes up false, that means that the values are different, making the numbers unique.
 const isUniquePt2 = (n1 === n2 && n1 === n3 && n1 === n4 && n2 === n3 && n2 === n4 && n3 === n4);
-console.log(isUniquePt2)
+console.log("Are these numbers all the same? " + isUniquePt2)
 
 // Here, we put the results into a single variable 
 // for convenience. Note how we negate isOver25 using
@@ -53,17 +53,21 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 let isDivisibleByFive = (n1 / 5 && n2 / 5 && n3/5 &&  n4/5) === true;
 
 console.log(isDivisibleByFive)
+console.log(`Are these numbers divisible by 5? ${isDivisibleByFive}` )
 
 //now checking if the first number is greater than the last Num
-const isFirstGreaterThanLast = (n1 > n4) === true;
+const isFirstGreaterThanLast = (n1 > n4);
 console.log(isFirstGreaterThanLast);
+// console.log
+
+
 //doing the arithmetic chains :)
 const subNums = n2 - n1;
 const multiplyNums = subNums * n3;
 const moduloNums = multiplyNums % n4;
 
 console.log(subNums, multiplyNums, moduloNums);
-
+console.log('Using arithmetic chains: ' + subNums + ", " + multiplyNums + ", " + `${moduloNums}.`);
 
 
 /** Part 2:
@@ -76,18 +80,29 @@ const fiftyFiveMPH = 30;
 const sixtyMPH = 28;
 const seventyFiveMPH = 23;
 
-//to determine how many gallons of gas were needed to get to the destination, I created the equation variable
-let equation = milesToDestination / fiftyFiveMPH;
+//to determine how many gallons of gas were needed to get to the destination, I created the equation variable as well as the price per gallon variable. By using the let keyword, I can change these values as I work through the rest of the equation.
+let gasEquation = milesToDestination / fiftyFiveMPH;
+let pricePerGallons = gasEquation * 3;
+let hoursOfTravel = milesToDestination / 55
 
-console.log(equation);
-let pricePerGallons55 = equation * 3
-console.log(pricePerGallons55)
+console.log(hoursOfTravel);
+console.log(gasEquation);
+console.log(pricePerGallons);
 
-equation = milesToDestination / sixtyMPH
+gasEquation = milesToDestination / sixtyMPH;
+pricePerGallons = gasEquation * 3;
+hoursOfTravel = milesToDestination / 60
 
-console.log(equation)
+console.log(gasEquation);
+console.log(pricePerGallons);
 
-equation = milesToDestination / seventyFiveMPH
+gasEquation = milesToDestination / seventyFiveMPH;
+pricePerGallons = gasEquation * 3;
+
+console.log(gasEquation);
+console.log(pricePerGallons);
+
+
 
 
 
