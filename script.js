@@ -26,6 +26,10 @@ const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
 // that we will review later.
 const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
 
+//i think this is the other part of part 1???
+const isUniquePt2 = (n1 === n2 && n1 === n3 && n1 === n4 && n2 === n3 && n2 === n4 && n3 === n4);
+console.log(isUniquePt2)
+
 // Here, we put the results into a single variable 
 // for convenience. Note how we negate isOver25 using
 // the ! operator. We could also have tested for 
@@ -53,10 +57,12 @@ console.log(isDivisibleByFive)
 //now checking if the first number is greater than the last Num
 const isFirstGreaterThanLast = (n1 > n4) === true;
 console.log(isFirstGreaterThanLast);
-
+//doing the arithmetic chains :)
 const subNums = n2 - n1;
 const multiplyNums = subNums * n3;
-const moduloNums = multiplyNums % n4
+const moduloNums = multiplyNums % n4;
+
+console.log(subNums, multiplyNums, moduloNums);
 
 
 
