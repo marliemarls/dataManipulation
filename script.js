@@ -80,14 +80,18 @@ const fiftyFiveMPH = 30;
 const sixtyMPH = 28;
 const seventyFiveMPH = 23;
 
+//i could make this into a function 
+
 //to determine how many gallons of gas were needed to get to the destination, I created the equation variable as well as the price per gallon variable. By using the let keyword, I can change these values as I work through the rest of the equation.
 let gasEquation = milesToDestination / fiftyFiveMPH;
 let pricePerGallons = gasEquation * 3;
 let hoursOfTravel = milesToDestination / 55
 
-console.log(hoursOfTravel);
 console.log(gasEquation);
 console.log(pricePerGallons);
+console.log(hoursOfTravel);
+
+console.log("It would take " + hoursOfTravel + ' hours to get to where we want to on 55 miles per hour.' )
 
 gasEquation = milesToDestination / sixtyMPH;
 pricePerGallons = gasEquation * 3;
@@ -95,15 +99,32 @@ hoursOfTravel = milesToDestination / 60
 
 console.log(gasEquation);
 console.log(pricePerGallons);
+console.log(hoursOfTravel);
+
+
 
 gasEquation = milesToDestination / seventyFiveMPH;
 pricePerGallons = gasEquation * 3;
+hoursOfTravel = milesToDestination / 75
 
 console.log(gasEquation);
 console.log(pricePerGallons);
+console.log(hoursOfTravel);
 
 
+//part three future exploration: 
 
+function makeItEasier(miles, MPH){
+  let gasEquat = milesToDestination / MPH;
+  let pricePerG = gasEquat * 3;
+  let hoursOfTrav = milesToDestination / miles;
+  let budgetFriendly = (gasPrice <= pricePerG);
+
+  // console.log 
+  console.log('Is this trip budget friendly? ' + budgetFriendly);
+}
+
+makeItEasier(55, fiftyFiveMPH)
 
 
 
