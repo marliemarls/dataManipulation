@@ -118,13 +118,16 @@ function makeItEasier(miles, MPH){
   let gasEquat = milesToDestination / MPH;
   let pricePerG = gasEquat * 3;
   let hoursOfTrav = milesToDestination / miles;
-  let budgetFriendly = (gasPrice <= pricePerG);
+  let budgetFriendly = (pricePerG <= fuelBudget);
 
   // console.log 
   console.log('Is this trip budget friendly? ' + budgetFriendly);
 }
 
 makeItEasier(55, fiftyFiveMPH)
+makeItEasier(60, sixtyMPH)
+makeItEasier(75, seventyFiveMPH)
+
 
 
 
