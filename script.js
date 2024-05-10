@@ -44,6 +44,20 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
 
+//this is where my part of code one begins
+//i checked by using the && operator if the numbers were all divisible by 5 (they were not)
+let isDivisibleByFive = (n1 / 5 && n2 / 5 && n3/5 &&  n4/5) === true;
+
+console.log(isDivisibleByFive)
+
+//now checking if the first number is greater than the last Num
+const isFirstGreaterThanLast = (n1 > n4) === true;
+console.log(isFirstGreaterThanLast);
+
+const subNums = n2 - n1;
+const multiplyNums = subNums * n3;
+const moduloNums = multiplyNums % n4
+
 
 
 /** Part 2:
@@ -56,10 +70,12 @@ const fiftyFiveMPH = 30;
 const sixtyMPH = 28;
 const seventyFiveMPH = 23;
 
+//to determine how many gallons of gas were needed to get to the destination, I created the equation variable
 let equation = milesToDestination / fiftyFiveMPH;
 
 console.log(equation);
-let gallons55 = equation
+let pricePerGallons55 = equation * 3
+console.log(pricePerGallons55)
 
 equation = milesToDestination / sixtyMPH
 
